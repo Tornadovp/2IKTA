@@ -1,0 +1,54 @@
+html, body {
+    height: 100%;
+}
+
+body {
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+background-image: linear-gradient(rgba(0, 0, 0, 0.75),rgba(0, 0, 0, 0.75)), url("jo.jpg");
+background-size: cover;
+}
+
+.rød {
+    font-style: sans-serif;
+
+    
+}
+
+
+main {
+    background-color: rgba(0, 0, 0, 0.301);
+    box-shadow: rgb(1, 148, 142);
+    border-radius: 25px;
+    width: 400px;
+    height: 350px;
+    text-align: center;
+
+}
+
+input[type=radio] {
+    accent-color: rgb(1, 148, 142);
+ }
+
+button {
+
+    border-radius: 25px;
+    background-color: rgb(255, 255, 255); 
+    border: none;
+    color: black;
+    padding: 15px 32px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 1rem;
+    
+  }
+
+  button:hover {
+    background: rgb(1, 148, 142);
+    transition: 0.5s;
+    }
