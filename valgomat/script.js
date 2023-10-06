@@ -99,6 +99,22 @@ const questionT = document.getElementById('question');
 const btnNext = document.getElementById('btnNext');
 const rbAnswer = document.getElementsByName('answer');
 const inputForm = document.getElementById('valgomatForm');
+const progressBar = document.getElementById('progress-bar');
+
+let progress = 0; // Initialize progress to 0%
+
+btnNext.addEventListener('click', () => {
+    progress += 10; // Increase progress by 10% each time the button is clicked
+    if (progress > 100) {
+        progress = 100; // Limit progress to 100%
+    }
+    updateProgressBar();
+});
+
+function updateProgressBar() {
+    progressBar.style.width = progress + '%';
+    progressBar.textContent = progress + '%';
+}
 
 btnNext.addEventListener('click', nextQuestion);
 
@@ -107,6 +123,7 @@ questionT.innerHTML = questions[qidx].question;
 
 function nextQuestion() {
     let radioChecked = document.querySelector('input[name="answer"]:checked');
+
     
     if (radioChecked) {
         calculateResult(qidx, radioChecked.value);
@@ -167,16 +184,16 @@ function showResult() {
                 choice = "Høyre";      
                 break
             case "B":
-                choice = "Blank";      
+                choice = "Blankt";      
                 break
             case "AP":
                 choice = "Arbeider Partiet";      
                 break
             case "SV":
-                choice = "Sosialistisk venstre parti";      
+                choice = "Sosialistisk Venstre Parti";      
                 break
             case "MDG":
-                choice = "Miljøpartiet de grønne";      
+                choice = "Miljøpartiet De Grønne";      
                 break
             case "V":
                 choice = "Venstre";      
@@ -185,12 +202,13 @@ function showResult() {
                 choice = "Fremskrittspartiet";      
                 break
             case "KRF":
-                choice = "Kristelig folke parti";      
+                choice = "Kristelig Folke Parti";      
                 break
         }
 
         
-        resultBox.innerHTML = `Partiet med høyest score er ${choice} med en score på ${highestScore}.`;
+        resultBox.innerHTML += "Du kan stemme " + choice + "<br>" + "<br>" ;
+        count++;
 
         sortedPartyScores
     }

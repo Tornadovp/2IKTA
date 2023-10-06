@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="no">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Valgomat</title>
+    <link rel="stylesheet" href="style.css">
+    <script defer src="script.js"></script>
+</head>
+
+<body>
+    <main>
+        <h1>Valgomat</h1>
+        
+        <form id="valgomatForm">
+            <h2 id="question" class="rød"></h2>
+            <label class="custom-button"><input type="radio" name="answer" value="enig">Enig<span class="checkmark"></span></label> 
+            <label class="custom-button"><input type="radio" name="answer" value="littEnig">Litt Enig<span class="checkmark"></span></label>
+            <label class="custom-button"><input type="radio" name="answer" value="vetIkke">Vet ikke<span class="checkmark"></span></label>
+            <label class="custom-button"><input type="radio" name="answer" value="littUenig">Litt Uenig<span class="checkmark"></span></label>
+            <label class="custom-button"><input type="radio" name="answer" value="uenig">Uenig<span class="checkmark"></span></label> 
+
+           
+            
+            <br><br>
+            <button id = "btnNext" type="button">neste</button>
+        </form>
+        
+        <div id="progress-container">
+            <div id="progress-bar">0%</div>
+        </div>
+    
+        <h2>Dine partier</h2>
+        <p id="result">
+            
+
+        </p>
+    </main>
+</body>
+</html>
+
